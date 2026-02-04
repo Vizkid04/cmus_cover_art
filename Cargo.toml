@@ -1,0 +1,14 @@
+[package]
+name = "cmus-cover-art"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "observe"
+path = "src/observe.rs"
+
+[[bin]]
+name = "display"
+path = "src/display.rs"
+
+[dependencies]
