@@ -10,6 +10,7 @@ Heavily inspired by https://github.com/nogizhopaboroda/cmus-cover-art
 # Dependencies
 - Kitty terminal emulator. May be avoided by modifying the code at src/display.rs which calls "kitten icat" and instead using an alternative terminal image rendering utility like imgcat.
 - Rust (cargo)
+- Magick
 
 # Instructions
 - `cd /home/$USER/.config/cmus`
