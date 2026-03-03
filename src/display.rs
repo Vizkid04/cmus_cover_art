@@ -13,7 +13,7 @@ const FALLBACK_IMAGE: &str =
 	"/home/vizkid/.config/cmus/cmus-cover-art/Violet_Evergarden.jpg";
 
 const IMAGE_VIEWER: &str =
-	"kitten icat --place=65x60@3x1 --scale-up";
+	"kitten icat --place=65x60@3x1 --stdin=yes";
 
 fn kill_child_processes() {
 	let _ = Command::new("pkill")
@@ -38,13 +38,25 @@ fn show_image(path: &str) {
 	let cmd = parts.next().unwrap();
 	let args: Vec<_> = parts.collect();
 
-	let _ = Command::new(cmd)
-		.args(args)
+	let mut magick_process = Command::new("magick")
 		.arg(path)
-		.stdin(Stdio::inherit())
-		.stdout(Stdio::inherit())
-		.stderr(Stdio::inherit())
-		.status();
+		.arg("-resize")
+		.arg("800x800!")
+		.arg("png:-")
+		.stdout(Stdio::piped())
+		.spawn()
+		.expect("failed to execute magick");
+
+	if let Some(stdout) = magick_process.stdout.take() {
+		let _ = Command::new(cmd)
+			.args(args)
+			.stdin(stdout)
+			.stdout(Stdio::inherit())
+			.stderr(Stdio::inherit())
+			.status();
+	}
+
+	let _ = magick_process.wait();
 }
 
 fn main() {
