@@ -5,6 +5,8 @@ Tool for displaying album art for cmus audio player.
 Heavily inspired by https://github.com/nogizhopaboroda/cmus-cover-art
 
 # Preview
+![alt text](https://raw.githubusercontent.com/Vizkid04/cmus_cover_art/master/Screenshot_cmus2.png)
+
 ![alt text](https://raw.githubusercontent.com/Vizkid04/cmus_cover_art/master/Screenshot_cmus.png)
 
 # Dependencies
