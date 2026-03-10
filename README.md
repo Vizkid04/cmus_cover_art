@@ -24,7 +24,7 @@ Replace $USER with your username.
 - `chmod +x target/release/observe`
 - `chmod +x target/release/display`
 - Open cmus and run `:set status_display_program=/home/$USER/.config/cmus/cmus_cover_art/target/release/observe`
-- Add `/home/$USER/.config/cmus/cmus-cover-art/target/release` to system path in .bashrc
+- Add `/home/$USER/.config/cmus/cmus_cover_art/target/release` to system path in .bashrc
 - Run `display` to display the album art.
 
 # Recommended
