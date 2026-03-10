@@ -7,10 +7,10 @@ use std::{
 };
 
 const COVERS_DIR: &str =
-	"/home/vizkid/.config/cmus/cmus_cover_art/target/release/.cover";
+	"/home/$USER/.config/cmus/cmus_cover_art/target/release/.cover";
 
 const FALLBACK_IMAGE: &str =
-	"/home/vizkid/.config/cmus/cmus_cover_art/Violet_Evergarden.jpg";
+	"/home/$USER/.config/cmus/cmus_cover_art/Violet_Evergarden.jpg";
 
 const IMAGE_VIEWER: &str =
 	"kitten icat --place=65x60@3x1 --stdin=yes";
