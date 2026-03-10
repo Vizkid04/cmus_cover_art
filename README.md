@@ -13,6 +13,7 @@ Heavily inspired by https://github.com/nogizhopaboroda/cmus-cover-art
 - Kitty terminal emulator. May be avoided by modifying the code at src/display.rs which calls "kitten icat" and instead using an alternative terminal image rendering utility like imgcat.
 - Rust (cargo)
 - Magick
+- ffmpeg
 
 # Instructions
 Replace $USER with your username.
